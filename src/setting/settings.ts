@@ -949,21 +949,12 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
                         desc: "Support continued development of the plugin.",
                         render: (setting) => {
                             setting.addButton((button) => {
-                                const link =
-                                    button.buttonEl.parentElement?.createEl(
-                                        "a",
-                                        {
-                                            href: "https://ko-fi.com/F1F195IQ5",
-                                            attr: { target: "_blank" },
-                                        }
-                                    );
-                                link?.createEl("img", {
+                                button.buttonEl.parentElement?.createEl("a", {
+                                    text: "Buy Me a Coffee at ko-fi.com",
+                                    href: "https://ko-fi.com/F1F195IQ5",
                                     attr: {
-                                        height: "36",
-                                        style: "border:0px;height:36px;",
-                                        src: "https://cdn.ko-fi.com/cdn/kofi3.png?v=3",
-                                        border: "0",
-                                        alt: "Buy Me a Coffee at ko-fi.com",
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
                                     },
                                 });
                                 button.buttonEl.remove();
